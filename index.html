@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/style.css" />
+    <script
+      src="https://kit.fontawesome.com/43508c6775.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>JQuery project test</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <ul class="navbar">
+      <li data-scroll="home" class="active">Home</li>
+      <li data-scroll="about">About</li>
+      <li data-scroll="services">Services</li>
+      <li data-scroll="solutions">Solutions</li>
+      <li data-scroll="products">Products</li>
+      <li data-scroll="contacts">Contact us</li>
+    </ul>
+    <!-- side menu -->
+    <div class="side-menu">
+      <ul>
+        <li>Option 1</li>
+        <li>Option 2</li>
+        <li>Option 3</li>
+      </ul>
+      <spin class="icon"><i class="fa-solid fa-gear"></i></spin>
+    </div>
+    <!-- Sections -->
+    <div id="home" class="block">
+      <h2>Home</h2>
+      <button
+        type="button"
+        class="show-popup effect-btn"
+        data-popup="first-popup"
+      >
+        <span> Show 1st popup </span>
+        <span><span class="prog-bar"></span></span>
+      </button>
+      <button
+        type="button"
+        class="show-popup effect-btn"
+        data-popup="second-popup"
+      >
+        <span> Show 2nd popup </span>
+        <span><span class="prog-bar"></span></span>
+      </button>
+    </div>
+    <div id="about" class="block">
+      <h2>About</h2>
+      <div class="slider-container">
+        <div class="main-img">
+          <img
+            src="/images/65535_52957819049_3f06d700a7_z_500_333_nofilter.jpg"
+            alt=""
+          />
+        </div>
+        <div class="thumb-img">
+          <div class="selected">
+            <img
+              src="/images/65535_52957819049_3f06d700a7_z_500_333_nofilter.jpg"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              src="/images/65535_52999032182_3558291938_500_333_nofilter.jpg"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              src="/images/65535_53711413964_8fb5baa52b_500_333_nofilter.jpg"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              src="/images/7131_27285562315_262fef7e13_500_333_nofilter.jpg"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              src="/images/7211_7071742055_8317abc729_500_333_nofilter.jpg"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              src="/images/65535_53156743633_9964ddedfa_500_333_nofilter.jpg"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              src="/images/65535_52999032182_3558291938_500_333_nofilter.jpg"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              src="/images/65535_53711413964_8fb5baa52b_500_333_nofilter.jpg"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              src="/images/7131_27285562315_262fef7e13_500_333_nofilter.jpg"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              src="/images/7211_7071742055_8317abc729_500_333_nofilter.jpg"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              src="/images/65535_53156743633_9964ddedfa_500_333_nofilter.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="services" class="block">
+      <h2>Services</h2>
+    </div>
+    <div id="solutions" class="block">
+      <h2>Solutions</h2>
+    </div>
+    <div id="products" class="block">
+      <h2>Products</h2>
+    </div>
+    <div id="contacts" class="block">
+      <h2>Contact us</h2>
+    </div>
+    <!-- Sections -->
+    <!-- scroll to up button -->
+    <a href="#" class="scroll-to-top"> <i class="fa-solid fa-angles-up"></i></a>
+
+    <!-- popup -->
+    <div class="popup first-popup">
+      <div class="popup-inner">
+        <h2>this is the first popup</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod pariatur
+          neque assumenda nemo officia sint voluptas recusandae ut, odit cum?
+        </p>
+        <button type="button" class="close-popup">X</button>
+      </div>
+    </div>
+    <div class="popup second-popup">
+      <div class="popup-inner">
+        <h2>this is the Second popup</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod pariatur
+          neque assumenda nemo officia sint voluptas recusandae ut, odit cum?
+        </p>
+        <button type="button" class="close-popup">X</button>
+      </div>
+    </div>
+
+    <!-- scripts -->
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/jquery-debounce-1.0.5.js"></script>
+    <script
+      src="https://code.jquery.com/color/jquery.color.plus-names-3.0.0.min.js"
+      integrity="sha256-S0cCtaFqwYvsLA/DpisMpMgMjUUGLzLEzL3D2iKzRPw="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
