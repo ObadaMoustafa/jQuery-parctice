@@ -35,6 +35,7 @@ html {
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 999;
 }
 
 .navbar > li {
@@ -55,8 +56,8 @@ html {
   min-height: 100vh;
   background-color: rgb(40 39 39);
   color: white;
-  width: 90%;
-  left: -90%;
+  width: 50%;
+  left: -50%;
   z-index: 9999;
   position: fixed;
   padding: 20px 10px;
@@ -123,8 +124,38 @@ html {
   background-color: white;
   border: solid 4px black;
   margin-top: 15px;
+  position: relative;
 }
+
 .slider-container .main-img {
+  position: relative;
+}
+
+.slider-container .slide-right,
+.slider-container .slide-left {
+  position: absolute;
+  height: 100%;
+  width: 5%;
+  background-color: rgb(48, 48, 48);
+  top: 0;
+  opacity: 0.2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.slider-container .slide-right {
+  right: 0;
+}
+.slider-container .slide-left {
+  left: 0;
+}
+
+.slide-right i,
+.slide-left i {
+  color: white;
+  font-size: x-large;
 }
 
 .slider-container .main-img img {
@@ -147,7 +178,7 @@ html {
 .slider-container .thumb-img .selected {
   opacity: 1;
   border: solid 2px red;
-  transition: all 1s;
+  transition: all 150ms;
 }
 
 .slider-container .thumb-img img {

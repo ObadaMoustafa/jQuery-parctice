@@ -17,7 +17,6 @@ $(function () {
   // show popup when clicking the buttons
   $(".show-popup").on("click", function () {
     const TargetedPopClassName = `.${$(this).data("popup")}`;
-    console.log(TargetedPopClassName);
     $(TargetedPopClassName).slideDown({
       start: function () {
         $(this).css("display", "flex");
@@ -126,13 +125,36 @@ $(function () {
   });
 
   //^ image slider
+  // select an image
   $(".thumb-img").on("click", "div", function () {
     const imgSrc = $(this).children("img").attr("src");
     const mainImage = $(".slider-container .main-img img");
-    mainImage.hide().attr("src", imgSrc).fadeIn(300);
+    mainImage.hide().attr("src", imgSrc).fadeIn(150);
 
     $(this).addClass("selected").siblings().removeClass("selected");
   });
+
+  // hover and click on next and previous buttons
+  $(".slider-container .slide-right, .slider-container .slide-left")
+    .on("mouseenter", function () {
+      $(this).animate({ opacity: 0.7 }, 150);
+    })
+    .on("mouseleave", function () {
+      $(this).animate({ opacity: 0.2 }, 150);
+    })
+    .on("click", function () {
+      const isRightBtn = $(this).hasClass("slide-right");
+      const selectedImage = $(".slider-container .thumb-img .selected");
+      if (isRightBtn) {
+        if (selectedImage.next().length === 0)
+          selectedImage.siblings().first().trigger("click");
+        else selectedImage.next().trigger("click");
+      } else {
+        if (selectedImage.prev().length === 0)
+          selectedImage.siblings().last().trigger("click");
+        else selectedImage.prev().trigger("click");
+      }
+    });
 });
 
 const activateRightNavbarBtn = $.debounce(function () {
